@@ -1,0 +1,11 @@
+<div class="card">
+  <strong> selected </strong> {{selected}} <br>
+  <strong> pos </strong> {{pos | json}} <br>
+  <ng-container [ngSwitch]="card != null">
+    <strong *ngSwitchCase="false">no card input</strong>
+    <ng-container *ngSwitchCase="true">
+      <strong> isFacingUp </strong> {{card.isFacingUp}} <br>
+      <strong> face </strong> {{card.face}} <br>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,4 @@
+<ng-container *ngIf="cards && cards.length !== 0; else noItems">
+  <lib-card *ngFor="let card of cards" [card]="card"></lib-card>
+</ng-container>
+<ng-template #noItems>No cards to display</ng-template>
