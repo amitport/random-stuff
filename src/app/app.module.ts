@@ -14,6 +14,10 @@ import { CardDemoPageComponent } from './demo-pages/card-demo-page.component';
 import { LayoutDemoPageComponent } from './demo-pages/layout-demo-page.component';
 import { CardListDemoPageComponent } from './demo-pages/card-list-demo-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TricksDemoPageComponent } from './demo-pages/tricks/tricks-demo-page.component';
+import { DraggableDirective } from './demo-pages/tricks/draggable.directive';
+import { Trick2Component } from './demo-pages/tricks/trick-2/trick-2.component';
+import { Trick1Component } from './demo-pages/tricks/trick-1/trick-1.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardDemoPageComponent,
     CardListDemoPageComponent,
     LayoutDemoPageComponent,
+
+    TricksDemoPageComponent, DraggableDirective, Trick1Component, Trick2Component,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +49,10 @@ import { ReactiveFormsModule } from '@angular/forms';
       {
         path: 'layout',
         component: LayoutDemoPageComponent,
+      },
+      {
+        path: 'tricks',
+        component: TricksDemoPageComponent,
       }
     ]),
 
