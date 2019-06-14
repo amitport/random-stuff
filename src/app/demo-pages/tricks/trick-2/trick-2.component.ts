@@ -6,8 +6,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   styleUrls: ['./trick-2.component.scss']
 })
 export class Trick2Component implements AfterViewInit {
-  @ViewChild('box') boxElemRef: ElementRef;
-  @ViewChild('container') containerElemRef: ElementRef;
+  @ViewChild('box', {static: false}) boxElemRef: ElementRef;
+  @ViewChild('container', {static: false}) containerElemRef: ElementRef;
   constructor() { }
 
   ngAfterViewInit(): void {

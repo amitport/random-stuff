@@ -8,8 +8,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./demo-nav.component.css']
 })
 export class DemoNavComponent {
-  @ContentChild('nav') navTemplate: TemplateRef<any>;
-  @ContentChild('main') mainTemplate: TemplateRef<any>;
+  @ContentChild('nav', {static: false}) navTemplate: TemplateRef<any>;
+  @ContentChild('main', {static: false}) mainTemplate: TemplateRef<any>;
 
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   constructor(private breakpointObserver: BreakpointObserver) {}

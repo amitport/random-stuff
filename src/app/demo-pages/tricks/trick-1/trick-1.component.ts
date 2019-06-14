@@ -10,8 +10,8 @@ interface Coords {
   templateUrl: './trick-1.component.html',
 })
 export class Trick1Component implements AfterViewInit {
-  @ViewChild('box') boxElemRef: ElementRef<HTMLElement>;
-  @ViewChild('container') containerElemRef: ElementRef;
+  @ViewChild('box', {static: false}) boxElemRef: ElementRef<HTMLElement>;
+  @ViewChild('container', {static: false}) containerElemRef: ElementRef;
 
   box: { elem: HTMLElement; bounds: ClientRect, initialCoords?: Coords, coords?: Coords, rotation?: Coords};
   containerElem: any;

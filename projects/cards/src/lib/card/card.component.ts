@@ -16,13 +16,14 @@ import { Card } from './card';
 @Component({
   selector: 'lib-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
-  encapsulation: ViewEncapsulation.Native,
+  styleUrls: ['./card.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent implements OnChanges, CanSelect, HasPosition {
   @Input() card: Card<string>;
   @Input() pos: Position = {x: 0, y: 0};
+  // tslint:disable-next-line:variable-name
   private _selected = false;
   @Input() get selected() {
     return this._selected;
